@@ -1,0 +1,34 @@
+Cambio de directorio www linux: 
+https://casujo18.wordpress.com/2015/03/25/apache-como-cambiar-directorio-varwwwhtml-en-ubuntu-14-04/
+
+Apache: Como cambiar directorio /var/www/html en ubuntu 14.04
+Bueno
+
+Hoy retomo mis apuntes aquí, volví a instalar apache,mysql y php.
+
+Soy de esos que que se me jode el ordenador una vez al año y siempre toca reinstalar todo, así que me gusta tener mis archivos dentro de mi /home/usuario/ para no olvidarme nada por si tengo que hacer una copia de seguridad en cuanto toca una reinstalación limpia del S.O o se me jode el pc.
+
+Tengo mis proyectos webs en /home/miUsuario/Programacion/Web/
+
+Y me he instalado el LAMP (Linux, Apache, MySql, Php).
+
+Edito el archivo: sudo gedit /etc/apache2/apache2.conf
+
+Buscamos en el archivo:
+
+<Directory /var/www/> y lo cambiamos por <Directory /home/miUsuario/misWebs/> , guardamos y lo cerramos.
+
+Y editamos el otro archivo: /etc/apache2/sites-available/000-default.conf
+
+Buscamos en el archivo:
+
+DocumentRoot /var/www/html
+y lo cambiamos por DocumentRoot /home/miUsuario/misWebs/ , finalmete guardamos y cerramos
+
+Y reiniciamos el apache:
+
+sudo service apache2 restart ó sudo apachectl stop/start
+
+Tengo instalado el apache2
+
+
