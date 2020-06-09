@@ -18,12 +18,12 @@ Las configuraciones del servidor dependen de las necesidades de cada usuario, si
 
 Comentando la siguiente linea con el simbolo "#" ( o modificandola al directorio especificado ) y ajustando los demas parametros según se requiera.
 
-" # <Directory /var/www/> "
-<Directory /home/jonathan/www/>
-Options Indexes FollowSymLinks
-AllowOverride None
-Allow from all
-Require all granted
+" # <Directory /var/www/> "<br>
+<Directory /home/jonathan/www/><br>
+Options Indexes FollowSymLinks<br>
+AllowOverride None<br>
+Allow from all<br>
+Require all granted<br>
 </Directory>
 
 Por ultimo se guardan los cambios (Me parece que es necesario abrir previamente el archivo con privilegios de root), luego aplicamos el comando:
